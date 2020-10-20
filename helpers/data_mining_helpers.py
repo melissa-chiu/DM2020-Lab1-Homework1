@@ -18,6 +18,17 @@ def format_labels(target, docs):
     """ format the labels """
     return docs.target_names[target]
 
+def format_labels_new(target):
+    """ format the labels """
+    if target==0:
+        name = 'negative'
+    else:
+        name = 'positive'
+    return name
+
+def get_length(target):
+    return len(target)
+
 def check_missing_values(row):
     """ functions that check and verifies if there are missing values in dataframe """
     counter = 0
